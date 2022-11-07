@@ -1,8 +1,6 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ping_everyone
@@ -18,7 +16,17 @@ namespace Ping_everyone
             int[] ipv4 = new int[4] { 1, 0, 0, 0 };
 
             Console.Write("You want to ping the [L]AN or [W]AN? ");
-            type = Convert.ToChar(Console.ReadLine().ToLower());
+            try
+            {
+                type = Convert.ToChar(Console.ReadLine().ToLower());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Bru only chars");
+                System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=YSDTPPM9qsc");
+                Console.ReadKey();
+                return;
+            }
             Console.Clear();
             if (type == 'w')
                 for (double i = 0; i < 4294967296; i++)
