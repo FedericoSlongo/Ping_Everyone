@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +44,7 @@ namespace Ping_everyone
             for (int i = 0; i < grandezza - (stringa / 2); i++)
                 Console.Write(" ");
         }
-        //Mette ha meta dello schermo lo spazio
+        //Mette a metà dello schermo lo spazio
         static void middle(int stringa)
         {
             int grandezza = (Console.WindowWidth / 2);
